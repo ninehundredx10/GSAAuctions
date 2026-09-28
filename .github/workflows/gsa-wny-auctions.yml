@@ -36,7 +36,6 @@ jobs:
         run: |
           git config user.name "gsa-wny-bot"
           git config user.email "actions@users.noreply.github.com"
-          git pull --rebase origin main
           git add data/gsa_wny_latest.csv data/gsa_wny_latest.txt
           if git diff --cached --quiet; then
             echo "No changes to commit"
