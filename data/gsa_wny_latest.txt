@@ -1,2 +1,30 @@
-Fetched 1 total listings; 0 matched state=NY + WNY zip filter.
+Fetched 785 total listings; 7 matched state=NY + WNY zip filter.
+
+- GLAVAL 36 36 PAX BUS
+    Batavia, NY 14020  |  ends 2026-10-02  |  high bid $0  |  sale #1-1-QSC-I-26-322
+    https://www.gsaauctions.gov/auctions/preview/378071
+
+- GLAVAL 28 28 PAX BUS
+    Batavia, NY 14020  |  ends 2026-10-02  |  high bid $0  |  sale #1-1-QSC-I-26-322
+    https://www.gsaauctions.gov/auctions/preview/378072
+
+- GLAVAL 28 28 PAX BUS
+    Batavia, NY 14020  |  ends 2026-10-02  |  high bid $0  |  sale #1-1-QSC-I-26-322
+    https://www.gsaauctions.gov/auctions/preview/378073
+
+- 2013 GLAVAL 28 PAX BUS
+    Batavia, NY 14020  |  ends 2026-10-02  |  high bid $0  |  sale #1-1-QSC-I-26-322
+    https://www.gsaauctions.gov/auctions/preview/378074
+
+- 2013 GLAVAL 28 PAX BUS
+    Batavia, NY 14020  |  ends 2026-10-02  |  high bid $0  |  sale #1-1-QSC-I-26-322
+    https://www.gsaauctions.gov/auctions/preview/378075
+
+- Various printers
+    BUFFALO, NY 14202  |  ends 2026-10-02  |  high bid $0  |  sale #1-1-QSC-I-26-330
+    https://www.gsaauctions.gov/auctions/preview/378229
+
+- NETWORK EQUIPMENT
+    BUFFALO, NY 14202  |  ends 2026-10-02  |  high bid $200.0  |  sale #1-1-QSC-I-26-330
+    https://www.gsaauctions.gov/auctions/preview/378230
 
