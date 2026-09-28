@@ -37,7 +37,7 @@ def fetch_auctions(api_key: str) -> list:
 
     data = json.loads(body)
     if isinstance(data, dict):
-        for key in ("auctions", "Auctions", "results", "data"):
+        for key in ("Results", "results", "auctions", "Auctions", "data"):
             if key in data and isinstance(data[key], list):
                 return data[key]
         return [data]
@@ -45,12 +45,12 @@ def fetch_auctions(api_key: str) -> list:
 
 
 def matches_filter(record: dict, state: str, zip3_prefixes) -> bool:
-    rec_state = (record.get("PropertyState") or record.get("propertyState") or "").upper()
+    rec_state = (record.get("propertyState") or record.get("PropertyState") or "").upper()
     if rec_state != state.upper():
         return False
     if zip3_prefixes is None:
         return True
-    zip_code = str(record.get("PropertyZip") or record.get("propertyZip") or "")
+    zip_code = str(record.get("propertyZip") or record.get("PropertyZip") or "")
     return zip_code[:3] in zip3_prefixes
 
 
@@ -89,14 +89,14 @@ def main():
         return
 
     for r in matches:
-        item = r.get("ItemName") or r.get("itemName") or "(no item name)"
-        city = r.get("PropertyCity") or r.get("propertyCity") or "?"
-        state = r.get("PropertyState") or r.get("propertyState") or "?"
-        zipc = r.get("PropertyZip") or r.get("propertyZip") or "?"
-        end = r.get("AucEndDt") or r.get("aucEndDt") or "?"
-        bid = r.get("HighBidAmount") or r.get("highBidAmount") or "0"
-        sale = r.get("SaleNo") or r.get("saleNo") or "?"
-        url = r.get("ItemDescURL") or r.get("itemDescURL") or ""
+        item = r.get("itemName") or r.get("ItemName") or "(no item name)"
+        city = r.get("propertyCity") or r.get("PropertyCity") or "?"
+        state = r.get("propertyState") or r.get("PropertyState") or "?"
+        zipc = r.get("propertyZip") or r.get("PropertyZip") or "?"
+        end = r.get("aucEndDt") or r.get("AucEndDt") or "?"
+        bid = r.get("highBidAmount") or r.get("HighBidAmount") or "0"
+        sale = r.get("saleNo") or r.get("SaleNo") or "?"
+        url = r.get("itemDescURL") or r.get("ItemDescURL") or ""
         print(f"- {item}")
         print(f"    {city}, {state} {zipc}  |  ends {end}  |  high bid ${bid}  |  sale #{sale}")
         if url:
