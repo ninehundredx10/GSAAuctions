@@ -1,0 +1,36 @@
+name: GSA WNY Auctions
+
+on:
+  schedule:
+    - cron: "0 10 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch GSA WNY listings
+        env:
+          GSA_API_KEY: ${{ secrets.GSA_API_KEY }}
+        run: |
+          mkdir -p data
+          python3 gsa_wny_auctions.py --csv data/gsa_wny_latest.csv
+          python3 gsa_wny_auctions.py > data/gsa_wny_latest.txt
+
+      - name: Commit results
+        run: |
+          git config user.name "gsa-wny-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/gsa_wny_latest.csv data/gsa_wny_latest.txt
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Weekly GSA WNY auctions refresh"
+          git push
