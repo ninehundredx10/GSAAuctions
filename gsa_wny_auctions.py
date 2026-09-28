@@ -73,16 +73,19 @@ def main():
     print(f"Fetched {len(all_records)} total listings; {len(matches)} matched "
           f"state={args.state}" + ("" if args.all_ny else " + WNY zip filter") + ".\n")
 
-    if not matches:
-        return
-
     if args.csv:
-        fieldnames = sorted({k for r in matches for k in r.keys()})
+        fieldnames = sorted({k for r in matches for k in r.keys()}) or ["note"]
         with open(args.csv, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            writer.writerows(matches)
+            if matches:
+                writer.writerows(matches)
+            else:
+                writer.writerow({fieldnames[0]: "no matching listings this run"})
         print(f"Wrote {len(matches)} rows to {args.csv}")
+        return
+
+    if not matches:
         return
 
     for r in matches:
