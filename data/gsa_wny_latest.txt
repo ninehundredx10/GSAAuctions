@@ -1,6 +1,2 @@
-Fetched 1167 total listings; 1 matched state=NY + WNY zip filter.
-
-- One Safe
-    Buffalo, NY 14202  |  ends 2026-10-16  |  high bid $0  |  sale #2-1-QSC-I-27-017
-    https://www.gsaauctions.gov/auctions/preview/379662
+Fetched 804 total listings; 0 matched state=NY + WNY zip filter.
 
