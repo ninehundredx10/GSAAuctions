@@ -1,2 +1,6 @@
-Fetched 764 total listings; 0 matched state=NY + WNY zip filter.
+Fetched 1000 total listings; 1 matched state=NY + WNY zip filter.
+
+- Stryker InTouch Hospital Beds
+    BUFFALO, NY 14215  |  ends 2026-11-09  |  high bid $0  |  sale #1-1-QSC-I-27-045
+    https://www.gsaauctions.gov/auctions/preview/382254
 
